@@ -57,6 +57,8 @@
       },
       "host": "Vă conectați la <0>{{hostname}}</0> - vă rugăm să confirmați că aveți încredere înainte de a vă crea un cont",
       "no": "Întoarce-te",
+      "noHost": "Serverul nu a fost configurat, deci nu vă puteți crea un cont",
+      "noHostTitle": "Serverul nu este configurat!",
       "title": "Ai încredere în acest server?",
       "yes": "Am încredere în acest server"
     },
@@ -79,6 +81,7 @@
   },
   "footer": {
     "legal": {
+      "disclaimer": "Declinare a răspunderii",
       "disclaimerText": "movie-web nu găzduiește niciun fișier, ci doar trimite la servicii terțe. Problemele juridice ar trebui abordate cu gazdele și furnizorii de fișiere. movie-web nu este responsabil pentru niciun fișier media afișat de furnizorii de video."
     },
     "links": {
@@ -94,6 +97,7 @@
       "about": "Despre",
       "dmca": "DMCA",
       "login": "Log in",
+      "onboarding": "Setup",
       "pagetitle": "{{title}} - movie-web",
       "register": "Inregistreaza-te",
       "settings": "Setări"
@@ -116,7 +120,12 @@
       "noResults": "Nu am putut găsi nimic!",
       "placeholder": {
         "default": "La ce dorești să te uiți?",
-        "extra": []
+        "extra": [
+          "Ce vrei să explorezi?",
+          "Ce e pe lista ta de urmărire?",
+          "Care e filmul tău preferat?",
+          "Care e serialul tău preferat?"
+        ]
       },
       "sectionTitle": "Rezultate de căutare"
     },
@@ -129,11 +138,15 @@
       },
       "morning": {
         "default": "La ce dorești să te in uiți dimineață aceasta?",
-        "extra": ["Aud că Before Sunrise este bun"]
+        "extra": [
+          "Aud că Before Sunrise este bun"
+        ]
       },
       "night": {
         "default": "La ce dorești să te uiți în astă seară?",
-        "extra": ["Obosit? Aud că The Exorcist is good."]
+        "extra": [
+          "Obosit? Aud că The Exorcist is good."
+        ]
       }
     }
   },
@@ -162,6 +175,65 @@
     "goHome": "Înapoi acasă",
     "message": "Ne-am uitat peste tot: sub pubele, în dulap, În spatele proxy-ului dar din păcate nu am găsit pagina pe care dumneavoastră o căutați.",
     "title": "N-am putut găsi pagina"
+  },
+  "onboarding": {
+    "defaultConfirm": {
+      "cancel": "Anulare",
+      "confirm": "Folosește setup-ul implicit",
+      "description": "Setupul implicit nu are cele mai bune stream-uri și poate fi insuportabil de încet.",
+      "title": "Sunteți sigur(ă)?"
+    },
+    "extension": {
+      "back": "Înapoi",
+      "explainer": "Folosind această extensie de browser, puteți obține cele mai bune stream-uri pe care le avem de oferit. Cu doar o simplă instalare.",
+      "explainerIos": "Din păcate, extensia de browser nu e suportată pe iOS, Apăsați <bold>Înapoi</bold> pentru a alege altă opțiune.",
+      "extensionHelp": "Dacă ați instalat extensia dar nu e detectată, <bold>deschideți extensia din meniul extensiilor al browserului dvs.</bold> și urmăriți pașii de pe ecran.",
+      "linkChrome": "Instalare extensie pentru Chrome",
+      "linkFirefox": "Instalare extensie pentru Firefox",
+      "notDetecting": "Instalată pe Chrome dar site-ul nu o detectează? Încerați să reîmprospătați pagina!",
+      "notDetectingAction": "Reîmporospătare pagină",
+      "status": {
+        "disallowed": "Extensia nu e activată pentru această pagină",
+        "disallowedAction": "Activare extensie",
+        "failed": "Nu s-a putut obține statusul",
+        "loading": "Așteptăm să vă instalați extensia",
+        "outdated": "Versiunea extensiei este prea veche",
+        "success": "Extensia funcționează conform așteptărilor!"
+      },
+      "submit": "Continuare",
+      "title": "Să începem cu o extensie"
+    },
+    "proxy": {
+      "back": "Înapoi",
+      "explainer": "Cu metoda proxy, puteți obține stream-uri de calitate prin a face un proxy cu autoservire.",
+      "input": {
+        "errorConnection": "Nu s-a putut conecta la proxy",
+        "errorInvalidUrl": "URL invalid",
+        "errorNotProxy": "Proxi așteptat, primit un sitw web în schimb",
+        "label": "URL-ul proxy-ului",
+        "placeholder": "https://"
+      },
+      "link": "Învață cum se face un proxy",
+      "submit": "Validare proxy",
+      "title": "Să facem un proxy nou"
+    },
+    "start": {
+      "explainer": "Pentru a obține cele mai bune stream-uri posibile, va trebui să alegeți ce metodă de streaming vreți să folosiți.",
+      "options": {
+        "default": {
+          "text": "Nu vreau stream-uri de calitate,<0 /> <1>folosire setup implicit</1>"
+        },
+        "extension": {
+          "action": "Instalare extensie",
+          "description": "Instalați extensia browser și obțineți acces la cele mai bune surse.",
+          "quality": "Cea mai bună calitate",
+          "title": "Extensie browser"
+        },
+        "proxy": {
+          "action": "Configurare proxy"
+        }
+      }
+    }
   },
   "overlays": {
     "close": "Închide"
@@ -398,7 +470,7 @@
     },
     "connections": {
       "server": {
-        "description": "Dacă doriți să vă conectați la un backend personalizat pentru a vă stoca datele, activați acest lucru și furnizați adresa URL.",
+        "description": "Dacă doriți să vă conectați la un backend personalizat pentru a vă stoca datele, activați acest lucru și furnizați adresa URL. <0>Instrucțiuni.</0>",
         "label": "Server personalizat",
         "urlLabel": "Adresa URL personalizată a serverului"
       },
@@ -410,7 +482,7 @@
       "title": "Conexiuni",
       "workers": {
         "addButton": "Adaugă un nou muncitor",
-        "description": "Pentru ca aplicația să funcționeze, tot traficul este direcționat prin proxy. Activați acest lucru dacă doriți să vă aduceți proprii lucrători.",
+        "description": "Pentru ca aplicația să funcționeze, tot traficul este direcționat prin proxy. Activați acest lucru dacă doriți să vă aduceți proprii lucrători. <0>Instrucțiuni.</0>",
         "emptyState": "Niciun muncitor incă, adaugă unu",
         "label": "Utilizați lucrători proxy personalizați",
         "urlLabel": "Adresele URL ale lucrătorilor",
