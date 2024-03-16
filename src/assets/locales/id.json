@@ -95,6 +95,7 @@
       "about": "Tentang",
       "dmca": "DMCA",
       "login": "Masuk",
+      "onboarding": "Penyiapan",
       "pagetitle": "{{title}} - movie-web",
       "register": "Daftar",
       "settings": "Pengaturan"
@@ -117,7 +118,12 @@
       "noResults": "Kami tidak dapat menemukan apapun!",
       "placeholder": {
         "default": "Apa yang ingin anda tonton?",
-        "extra": []
+        "extra": [
+          "Apa yang ingin kamu jelajahi?",
+          "Ada apa di daftar tontonmu?",
+          "Apa film favoritmu?",
+          "Apa serial favoritmu?"
+        ]
       },
       "sectionTitle": "Hasil pencarian"
     },
@@ -130,11 +136,15 @@
       },
       "morning": {
         "default": "Apa yang ingin anda tonton pagi ini?",
-        "extra": ["Kayaknya film Before Sunrise bagus deh"]
+        "extra": [
+          "Kayaknya film Before Sunrise bagus deh"
+        ]
       },
       "night": {
         "default": "Apa yang ingin anda tonton malam ini?",
-        "extra": ["Capek? Katanya The Exocist rekomended."]
+        "extra": [
+          "Capek? Katanya The Exocist rekomended."
+        ]
       }
     }
   },
@@ -163,6 +173,16 @@
     "goHome": "Kembali",
     "message": "Kami sudah mencari dimana-mana: di bawah tempat sampah, di lemari, di belakang server proxy, tapi tetap gagal menemukan halaman yang anda cari.",
     "title": "Gagal menemukan halaman"
+  },
+  "onboarding": {
+    "defaultConfirm": {
+      "cancel": "Batal",
+      "title": "Apa kamu yakin?"
+    },
+    "extension": {
+      "back": "Kembali",
+      "explainerIos": "Sayangnya, ekstensi browser tidak didukung di iOS, Tekan <bold>Kembali<bold> untuk memilih opsi lain."
+    }
   },
   "overlays": {
     "close": "Tutup"
