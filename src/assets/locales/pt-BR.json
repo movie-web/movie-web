@@ -57,6 +57,8 @@
       },
       "host": "Você está se conectando a <0>{{hostname}}</0> - por favor, confirme se confia nele antes de criar uma conta",
       "no": "Voltar",
+      "noHost": "O servidor não foi configurado, portanto você não pode criar uma conta",
+      "noHostTitle": "Servidor não configurado!",
       "title": "Você confia neste servidor?",
       "yes": "Eu confio neste servidor"
     },
@@ -118,7 +120,12 @@
       "noResults": "Não conseguimos encontrar nada!",
       "placeholder": {
         "default": "O que você quer assistir?",
-        "extra": []
+        "extra": [
+          "O que você gostaria de explorar?",
+          "O que está na sua lista para assistir?",
+          "Qual o seu filme favorito?",
+          "Qual a sua série favorita?"
+        ]
       },
       "sectionTitle": "Resultados da pesquisa"
     },
@@ -131,11 +138,15 @@
       },
       "morning": {
         "default": "O que você gostaria de assistir esta manhã?",
-        "extra": ["Ouvi dizer que Antes do Amanhecer é bom"]
+        "extra": [
+          "Ouvi dizer que Antes do Amanhecer é bom"
+        ]
       },
       "night": {
         "default": "O que você gostaria de assistir esta noite?",
-        "extra": ["Cansado? Ouvi dizer que O Exorcista é bom."]
+        "extra": [
+          "Cansado? Ouvi dizer que O Exorcista é bom."
+        ]
       }
     }
   },
@@ -525,6 +536,7 @@
       }
     },
     "subtitles": {
+      "backgroundBlurLabel": "Desfoque de fundo",
       "backgroundLabel": "Opacidade do fundo",
       "colorLabel": "Cor",
       "previewQuote": "Eu não devo ter medo. Medo é o assassino da mente.",
