@@ -57,6 +57,8 @@
       },
       "host": "<0>{{hostname}}</0> adlı sunucuya bağlanıyorsunuz - lütfen hesap oluşturmadan önce sunucuya güvendiğinizi onaylayın",
       "no": "Geri dön",
+      "noHost": "Sunucu henüz yapılandırılmadığı için hesap oluşturamazsınız",
+      "noHostTitle": "Sunucu kullanılamıyor!",
       "title": "Bu sunucuya güveniyor musunuz?",
       "yes": "Bu sunucuya güveniyorum"
     },
@@ -118,7 +120,12 @@
       "noResults": "Hiçbir şey bulamadık!",
       "placeholder": {
         "default": "Ne izlemek istersiniz?",
-        "extra": []
+        "extra": [
+          "Ne keşfetmek istiyorsunuz?",
+          "İzleme listenizde neler var?",
+          "Favori filmin ne?",
+          "En sevdiğiniz dizi ne?"
+        ]
       },
       "sectionTitle": "Arama sonuçları"
     },
@@ -131,11 +138,15 @@
       },
       "morning": {
         "default": "Bu sabah ne izlemek istersiniz?",
-        "extra": ["Before Sunrise'a iyi diyorlar"]
+        "extra": [
+          "Before Sunrise'a iyi diyorlar"
+        ]
       },
       "night": {
         "default": "Bu akşam ne izlemek istersiniz?",
-        "extra": ["Yoruldun mu? The Exorcist'e iyi diyorlar."]
+        "extra": [
+          "Yoruldun mu? The Exorcist'e iyi diyorlar."
+        ]
       }
     }
   },
@@ -165,6 +176,69 @@
     "message": "Her yere baktık: bazanın altına, dolabın içine hatta ara sunucuya ama maalesef aradığınız sayfayı bulamadık.",
     "title": "Sayfa bulunamadı"
   },
+  "onboarding": {
+    "defaultConfirm": {
+      "cancel": "İptal Et",
+      "confirm": "Ön Tanımlı Ayarları Kullan",
+      "description": "Varsayılan ayarlar en iyi akış hizmetlerini sunmayabilir ve oldukça yavaş olabilir.",
+      "title": "Emin misiniz?"
+    },
+    "extension": {
+      "back": "Geri Dön",
+      "explainer": "Tarayıcı uzantısını kullanarak, size sunduğumuz en iyi akışlara erişebilirsiniz. Kurulumu ise oldukça basit.",
+      "explainerIos": "Ne yazık ki, tarayıcı uzantısı iOS cihazlarında desteklenmemektedir. <bold>Geri Dön</bold> düğmesine basarak başka bir seçenek seçebilirsiniz.",
+      "extensionHelp": "Eklenti yüklediyseniz ancak algılamıyorsa, <bold>tarayıcınızın uzantı menüsünden eklentiyi açın</bold> ve ekran adımları takip edin.",
+      "linkChrome": "Chrome uzantısını yükleyin",
+      "linkFirefox": "Firefox uzantısını yükleyin",
+      "notDetecting": "Chrome'a yüklendi, ancak site algılamıyor mu? Sayfayı yenileyin!",
+      "notDetectingAction": "Sayfayı yenile",
+      "status": {
+        "disallowed": "Bu sayfa için uzantı etkinleştirilmemiş",
+        "disallowedAction": "Uzantıyı etkinleştir",
+        "failed": "Durum bilgisi alınamadı",
+        "loading": "Uzantıyı yüklemenizi bekliyoruz",
+        "outdated": "Uzantınız çok eski",
+        "success": "Uzantı sorunsuz çalışıyor!"
+      },
+      "submit": "Devam Et",
+      "title": "Hadi bir uzantıyla başlayalım"
+    },
+    "proxy": {
+      "back": "Geri Dön",
+      "explainer": "Ara sunucu yöntemiyle, yüksek kalitede yayınlara kolayca erişin.",
+      "input": {
+        "errorConnection": "Proxy'ye bağlanılamadı",
+        "errorInvalidUrl": "Geçerli bir URL değil",
+        "errorNotProxy": "Proxy bekleniyordu, web sitesine yönlendirildi",
+        "label": "Proxy URL",
+        "placeholder": "https://"
+      },
+      "link": "Proxy oluşturmayı öğrenin",
+      "submit": "Proxy'yi Gönder",
+      "title": "Hadi yeni bir proxy oluşturalım"
+    },
+    "start": {
+      "explainer": "En iyi akış deneyimi için kullanmak istediğiniz akış yöntemini seçmeniz gerekiyor.",
+      "options": {
+        "default": {
+          "text": "Yüksek kaliteli akış istemiyorum,<0 /> <1>varsayılan ayarı kullanın</1>"
+        },
+        "extension": {
+          "action": "Uzantıyı Yükle",
+          "description": "En iyi kaynaklara erişmek için tarayıcı uzantısını yükleyin.",
+          "quality": "En yüksek kalite",
+          "title": "Tarayıcı uzantısı"
+        },
+        "proxy": {
+          "action": "Proxy'yi Kur",
+          "description": "Sadece 5 dakikada proxy kurun ve harika kaynaklara erişin.",
+          "quality": "İyi kalite",
+          "title": "Özel Proxy"
+        }
+      },
+      "title": "movie-web ile sizi hazır hale getirelim"
+    }
+  },
   "overlays": {
     "close": "Kapat"
   },
@@ -178,10 +252,11 @@
     },
     "menus": {
       "downloads": {
+        "copyHlsPlaylist": "HLS oynatma listesi bağlantısını kopyala",
         "disclaimer": "İndirme bağlantıları doğrudan sağlayıcının kendisinden alınır. movie-web'in sağlanan indirme bağlantıları üzerinde hiçbir konrolü yoktur.",
         "downloadSubtitle": "Geçerli altyazıyı indir",
         "downloadVideo": "Videoyu indir",
-        "hlsDisclaimer": "İndirme bağlantıları doğrudan sağlayıcının kendisinden alınır. movie-web'in sağlanan indirme bağlantıları üzerinde hiçbir konrolü yoktur. Lütfen bir HLS oynatma listesi indirdiğinizi unutmayın; bu, gelişmiş multimedya akışına aşina olan kullanıcılara yöneliktir.",
+        "hlsDisclaimer": "İndirmeler doğrudan sağlayıcıdan alınır. movie-web, indirmelerin nasıl sağlanacağı üzerinde kontrole sahip değildir.<br /><br />Lütfen bir HLS oynatma listesi indirdiğinizi unutmayın; <bold>ileri seviye bilginiz yoksa indirmeniz önerilmez. akış biçimleri</bold>. Farklı formatlar için farklı kaynakları deneyin.",
         "onAndroid": {
           "1": "Android'e indirmek için önce indir butonuna basın, sonra açılan yeni sayfada video üzerine <bold>basılı tutun</bold>, ardından <bold>Videoyu indir</bold> seçeneğini seçin.",
           "shortTitle": "İndir / Android",
@@ -261,6 +336,17 @@
       "api": {
         "text": "API üstverisi yüklenemedi, lütfen internet bağlantınızı kontrol edin.",
         "title": "API üstverisi yüklenemedi"
+      },
+      "dmca": {
+        "badge": "Kaldırıldı",
+        "text": "Üzgünüz, bu içerik telif hakkı ihlali veya yayından kaldırma bildirimi nedeniyle kullanılamıyor.",
+        "title": "İçerik kaldırıldı"
+      },
+      "extensionPermission": {
+        "badge": "İzin Gerekli",
+        "button": "Uzantıyı kullanın",
+        "text": "Tarayıcı uzantısını yüklemişsiniz, ancak uzantıyı kullanmaya başlamak için izninize ihtiyacımız var.",
+        "title": "Uzantıyı Kişiselleştir"
       },
       "failed": {
         "badge": "Başarısız oldu",
@@ -393,6 +479,28 @@
         "label": "Özel sunucu",
         "urlLabel": "Özel sunucu URL'si"
       },
+      "setup": {
+        "doSetup": "Başlayın",
+        "errorStatus": {
+          "description": "Kurulumda dikkat etmeniz gereken bir veya daha fazla öğe var gibi görünüyor.",
+          "title": "Dikkatinizi gerektiren bir şey var"
+        },
+        "itemError": "Kurulum sırasında bir hata oluşmuş olabilir. Sorunu çözmek için kurulum adımlarını tekrar izleyin.",
+        "items": {
+          "default": "Varsayılan ayarlar",
+          "extension": "Tarayıcı uzantısı",
+          "proxy": "Özel Proxy"
+        },
+        "redoSetup": "Kurulumu tekrar yapın",
+        "successStatus": {
+          "description": "Sevdiğiniz şeyleri izlemek için her şey hazır. Başlayın ve keyfini çıkarın.",
+          "title": "Tamam!"
+        },
+        "unsetStatus": {
+          "description": "Kurulum sürecini başlatmak için lütfen sağdaki düğmeye tıklayın.",
+          "title": "Başlamak için kurulumu tamamlamanız gerekiyor."
+        }
+      },
       "title": "Bağlantılar",
       "workers": {
         "addButton": "Yeni işleyici ekle",
@@ -402,6 +510,14 @@
         "urlLabel": "İşleyici URL'leri",
         "urlPlaceholder": "https://"
       }
+    },
+    "preferences": {
+      "language": "Uygulama dili",
+      "languageDescription": "Uygulamanın tamamı için seçili dil",
+      "thumbnail": "Küçük resimler oluştur",
+      "thumbnailDescription": "Çoğu video için ön izleme görseli bulunmaz. Bu ayarı etkinleştirerek anında oluşturulmasını sağlayabilirsiniz, ancak bu videonuzu yavaşlatabilir.",
+      "thumbnailLabel": "Küçük resimler oluştur",
+      "title": "Ayarlar"
     },
     "reset": "Sıfırla",
     "save": "Kaydet",
@@ -420,6 +536,7 @@
       }
     },
     "subtitles": {
+      "backgroundBlurLabel": "Arka plan bulanıklığı",
       "backgroundLabel": "Arka plan opaklığı",
       "colorLabel": "Renk",
       "previewQuote": "Korkmamalıyım. Korku aklın katilidir.",
