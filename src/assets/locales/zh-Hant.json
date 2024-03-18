@@ -1,6 +1,6 @@
 {
   "about": {
-    "description": "movie-web 是一款在互聯網上搜尋流媒體的網路應用程式。團隊致力於讓使用者以最簡約的方式消費內容。",
+    "description": "movie-web 是一款在互聯網上搜尋串流媒體的網路應用程式。團隊致力於讓使用者以最簡約的方式觀看內容。",
     "faqTitle": "常見問題",
     "q1": {
       "body": "movie-web 不託管任何內容。您點選觀看內容時，系統均從互聯網搜尋（在加載提示頁和“視頻源”選項卡中，您可以看到正在使用的源）。媒體從未在 movie-web 中上傳，所有內容均通過搜索機制而得。",
@@ -12,7 +12,7 @@
     },
     "q3": {
       "body": "我們的搜尋結果由電影資料庫（TMDB）驅動，無論視訊來源是否有對應內容，都會顯示結果。",
-      "title": "搜尋結果中已顯示了影視劇或其他節目，為何我無法播放？"
+      "title": "搜尋結果中已顯示了電視劇或其他節目，為何我無法播放？"
     },
     "title": "關於 movie-web"
   },
@@ -22,18 +22,18 @@
   },
   "auth": {
     "createAccount": "還沒有帳戶？ <0>建立一個</0>",
-    "deviceNameLabel": "設備名稱",
+    "deviceNameLabel": "裝置名稱",
     "deviceNamePlaceholder": "我的手機",
     "generate": {
       "description": "您的密碼短語相當於使用者名稱與密碼。由於您需要輸入它來登入帳戶，請確保將其存放到安全位置",
-      "next": "我已儲存密碼短語",
+      "next": "我已經儲存密碼短語",
       "passphraseFrameLabel": "密碼短語",
       "title": "您的密碼短語"
     },
     "hasAccount": "已經擁有帳戶？ <0>點此登入。 </0>",
     "login": {
       "description": "請輸入密碼短語以登入您的帳戶",
-      "deviceLengthError": "請輸入設備名稱",
+      "deviceLengthError": "請輸入裝置名稱",
       "passphraseLabel": "12 字密碼短語",
       "passphrasePlaceholder": "密碼短語",
       "submit": "登入",
@@ -89,7 +89,7 @@
       "dmca": "DMCA",
       "github": "GitHub"
     },
-    "tagline": "使用這個開源流媒體應用程序觀看您最喜歡的節目和電影。"
+    "tagline": "使用這個開源串流媒體應用程式觀看您最喜歡的節目和電影。"
   },
   "global": {
     "name": "movie-web",
@@ -145,7 +145,7 @@
       "night": {
         "default": "您今晚想看什麼？",
         "extra": [
-          "疲倦了嗎？我聽說《驅魔人》不錯。"
+          "你疲倦嗎？我聽說《驅魔人》不錯。"
         ]
       }
     }
@@ -218,7 +218,7 @@
       "title": "讓我們創建一個新的代理伺服器"
     },
     "start": {
-      "explainer": "為了獲得最好的流媒體，您需要選擇您想使用的流媒體方法。",
+      "explainer": "為了獲得最好的串流媒體，您需要選擇您想使用的串流方法。",
       "options": {
         "default": {
           "text": "我不想要高品質的串流，<0 /> <1> 使用預設設置</1>"
@@ -248,7 +248,7 @@
       "short": "後退"
     },
     "casting": {
-      "enabled": "正在投放到設備…"
+      "enabled": "正在投放到裝置…"
     },
     "menus": {
       "downloads": {
@@ -345,7 +345,7 @@
       "extensionPermission": {
         "badge": "缺少權限",
         "button": "使用瀏覽器擴充功能",
-        "text": "您已安裝瀏覽器擴展，但我們需要您的許可才能啟用它。",
+        "text": "您已安裝瀏覽器擴展功能，但我們需要您的許可才能啟用它。",
         "title": "配置瀏覽器擴充功能"
       },
       "failed": {
@@ -382,7 +382,7 @@
       "items": {
         "failure": "發生錯誤",
         "notFound": "沒有視頻",
-        "pending": "檢查影片..."
+        "pending": "尋找影片中..."
       },
       "notFound": {
         "badge": "未找到",
@@ -444,7 +444,7 @@
       },
       "devices": {
         "deviceNameLabel": "設備名稱",
-        "failed": "無法載入階段",
+        "failed": "無法載入",
         "removeDevice": "刪除",
         "title": "設備"
       },
@@ -517,7 +517,7 @@
       "thumbnail": "生成縮圖",
       "thumbnailDescription": "大多數時候，視頻沒有縮圖。您可以啟用此設置以即時生成它們，但它們會使您的視頻變慢。",
       "thumbnailLabel": "生成縮圖",
-      "title": "偏好"
+      "title": "偏好設定"
     },
     "reset": "重置",
     "save": "保存",
@@ -530,7 +530,7 @@
         "insecure": "不安全",
         "notLoggedIn": "您尚未登錄",
         "secure": "安全",
-        "title": "應用資訊",
+        "title": "應用程式的資訊",
         "unknownVersion": "未知",
         "userId": "使用者ID"
       }
