@@ -294,6 +294,7 @@
         "title": "Качество"
       },
       "settings": {
+        "audioItem": "Аудио",
         "downloadItem": "Скачать",
         "enableSubtitles": "Включить субтитры",
         "experienceSection": "Впечатления от просмотра",
