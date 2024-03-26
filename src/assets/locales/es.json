@@ -294,6 +294,7 @@
         "title": "Calidad"
       },
       "settings": {
+        "audioItem": "Audio",
         "downloadItem": "Descargar",
         "enableSubtitles": "Habilitar subtítulos",
         "experienceSection": "Experiencia de visualización",
