@@ -294,6 +294,7 @@
         "title": "Kwaliteit"
       },
       "settings": {
+        "audioItem": "Audio",
         "downloadItem": "Download",
         "enableSubtitles": "Ondertitels inschakelen",
         "experienceSection": "Kijk-ervaring",
@@ -320,8 +321,9 @@
         "unknownOption": "Onbekend"
       },
       "subtitles": {
-        "customChoice": "Selecteer ondertiteling uit bestand",
+        "customChoice": "Sleep of upload bestand",
         "customizeLabel": "Aanpassen",
+        "dropSubtitleFile": "Sleep ondertitelbestand naar hier",
         "offChoice": "Uit",
         "settings": {
           "backlink": "Aangepaste ondertiteling",
