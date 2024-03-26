@@ -320,8 +320,9 @@
         "unknownOption": "Unbekannt"
       },
       "subtitles": {
-        "customChoice": "Untertitel aus Datei wählen",
+        "customChoice": "Untertiteldatei auswählen oder hier ablegen",
         "customizeLabel": "Anpassen",
+        "dropSubtitleFile": "Untertiteldatei hier ablegen",
         "offChoice": "Aus",
         "settings": {
           "backlink": "Eigene Untertitel",
