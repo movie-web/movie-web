@@ -190,7 +190,7 @@
       "extensionHelp": "Jeżeli zainstalowałeś rozszerzenie, ale nie zostało ono wykryte, <bold>otwórz rozszerzenie za pomocą menu rozszerzeń przeglądarki</bold> i postępuj zgodnie z instrukcjami wyświetlanymi na ekranie.",
       "linkChrome": "Zainstaluj rozszerzenie na Chrome",
       "linkFirefox": "Zainstaluj rozszerzenie na Firefox",
-      "notDetecting": "Zainstalowano na Chrome, ale się nie wyświetla? Spróbuj odświeżyć stronę!",
+      "notDetecting": "Zainstalowano w Chrome, ale strona go nie wykrywa? Spróbuj odświeżyć stronę!",
       "notDetectingAction": "Odśwież stronę",
       "status": {
         "disallowed": "Rozszerzenie nie jest włączone dla tej strony",
@@ -321,7 +321,7 @@
         "unknownOption": "Nieznany"
       },
       "subtitles": {
-        "customChoice": "Wybierz napisy z pliku",
+        "customChoice": "Wrzuć lub prześlij plik",
         "customizeLabel": "Dostosuj",
         "dropSubtitleFile": "Przeciągnij i upuść plik z napisami tutaj",
         "offChoice": "Wyłączone",
