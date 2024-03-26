@@ -57,6 +57,8 @@
       },
       "host": "Łączysz się z <0>{{hostname}}</0> - przed utworzeniem konta potwierdź że ufasz temu serwerowi",
       "no": "Wstecz",
+      "noHost": "Serwer nie został skonfigurowany, więc nie można utworzyć konta",
+      "noHostTitle": "Serwer nie skonfigurowany!",
       "title": "Ufasz temu serwerowi?",
       "yes": "Ufam temu serwerowi"
     },
@@ -117,7 +119,13 @@
       "loading": "Wczytywanie...",
       "noResults": "Nie mogliśmy niczego znaleźć!",
       "placeholder": {
-        "default": "Co chciałbyś obejrzeć?"
+        "default": "Co chciałbyś obejrzeć?",
+        "extra": [
+          "Co chcesz odkryć?",
+          "Co znajduje się na Twojej liście do obejrzenia?",
+          "Jaki jest twój ulubiony film?",
+          "Jaki jest twój ulubiony serial?"
+        ]
       },
       "sectionTitle": "Wyniki wyszukiwania"
     },
@@ -244,6 +252,7 @@
     },
     "menus": {
       "downloads": {
+        "copyHlsPlaylist": "Kopiuj link do listy odtwarzania HLS",
         "disclaimer": "Pliki do pobrania są pobierane bezpośrednio od dostawcy. movie-web nie ma kontroli nad sposobem dostarczania plików do pobrania.",
         "downloadSubtitle": "Pobierz aktualne napisy",
         "downloadVideo": "Pobierz wideo",
@@ -285,6 +294,7 @@
         "title": "Jakość"
       },
       "settings": {
+        "audioItem": "Dźwięk",
         "downloadItem": "Pobierz",
         "enableSubtitles": "Włącz napisy",
         "experienceSection": "Odtwarzanie",
@@ -313,6 +323,7 @@
       "subtitles": {
         "customChoice": "Wybierz napisy z pliku",
         "customizeLabel": "Dostosuj",
+        "dropSubtitleFile": "Przeciągnij i upuść plik z napisami tutaj",
         "offChoice": "Wyłączone",
         "settings": {
           "backlink": "Własne napisy",
