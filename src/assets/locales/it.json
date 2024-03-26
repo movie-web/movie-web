@@ -321,8 +321,9 @@
         "unknownOption": "Sconosciuto"
       },
       "subtitles": {
-        "customChoice": "Selezionare i sottotitoli dal file",
+        "customChoice": "Trascina o carica il file",
         "customizeLabel": "Personalizzare",
+        "dropSubtitleFile": "Trascina il file dei sottotitoli qui",
         "offChoice": "Spento",
         "settings": {
           "backlink": "Sottotitoli personalizzati",
