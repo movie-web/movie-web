@@ -321,8 +321,9 @@
         "unknownOption": "Desconhecido"
       },
       "subtitles": {
-        "customChoice": "Selecione arquivo de legenda",
+        "customChoice": "Solte ou faça upload do arquivo",
         "customizeLabel": "Personalizar",
+        "dropSubtitleFile": "Solte o arquivo da legenda aqui",
         "offChoice": "Desativadas",
         "settings": {
           "backlink": "Legendas personalizadas",
