@@ -323,6 +323,7 @@
       "subtitles": {
         "customChoice": "Выбрать субтитры из файла",
         "customizeLabel": "Настроить",
+        "dropSubtitleFile": "Перетащите файл субтитров",
         "offChoice": "Выключить",
         "settings": {
           "backlink": "Пользовательские субтитры",
