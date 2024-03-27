@@ -294,6 +294,7 @@
         "title": "کیفیت"
       },
       "settings": {
+        "audioItem": "صدا",
         "downloadItem": "دانلود",
         "enableSubtitles": "فعال کردن زیرنویس",
         "experienceSection": "تجربه مشاهده",
@@ -320,8 +321,9 @@
         "unknownOption": "ناشناخته"
       },
       "subtitles": {
-        "customChoice": "انتخاب زیرنویس از فایل",
+        "customChoice": "فایل را رها یا آپلود کنید",
         "customizeLabel": "شخصی سازی",
+        "dropSubtitleFile": "فایل زیرنویس را اینجا بکشید",
         "offChoice": "خاموش",
         "settings": {
           "backlink": "زیرنویس سفارشی",
