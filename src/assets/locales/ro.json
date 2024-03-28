@@ -57,6 +57,8 @@
       },
       "host": "Vă conectați la <0>{{hostname}}</0> - vă rugăm să confirmați că aveți încredere înainte de a vă crea un cont",
       "no": "Întoarce-te",
+      "noHost": "Serverul nu a fost configurat, deci nu vă puteți crea un cont",
+      "noHostTitle": "Serverul nu este configurat!",
       "title": "Ai încredere în acest server?",
       "yes": "Am încredere în acest server"
     },
@@ -79,6 +81,7 @@
   },
   "footer": {
     "legal": {
+      "disclaimer": "Declinare a răspunderii",
       "disclaimerText": "movie-web nu găzduiește niciun fișier, ci doar trimite la servicii terțe. Problemele juridice ar trebui abordate cu gazdele și furnizorii de fișiere. movie-web nu este responsabil pentru niciun fișier media afișat de furnizorii de video."
     },
     "links": {
@@ -94,6 +97,7 @@
       "about": "Despre",
       "dmca": "DMCA",
       "login": "Log in",
+      "onboarding": "Configurație",
       "pagetitle": "{{title}} - movie-web",
       "register": "Inregistreaza-te",
       "settings": "Setări"
@@ -116,7 +120,12 @@
       "noResults": "Nu am putut găsi nimic!",
       "placeholder": {
         "default": "La ce dorești să te uiți?",
-        "extra": []
+        "extra": [
+          "Ce vrei să explorezi?",
+          "Ce e pe lista dvs. de urmărire?",
+          "Care e filmul tău preferat?",
+          "Care e serialul tău preferat?"
+        ]
       },
       "sectionTitle": "Rezultate de căutare"
     },
@@ -129,11 +138,15 @@
       },
       "morning": {
         "default": "La ce dorești să te in uiți dimineață aceasta?",
-        "extra": ["Aud că Before Sunrise este bun"]
+        "extra": [
+          "Aud că Before Sunrise este bun"
+        ]
       },
       "night": {
         "default": "La ce dorești să te uiți în astă seară?",
-        "extra": ["Obosit? Aud că The Exorcist is good."]
+        "extra": [
+          "Obosit? Aud că The Exorcist is good."
+        ]
       }
     }
   },
@@ -163,6 +176,69 @@
     "message": "Ne-am uitat peste tot: sub pubele, în dulap, În spatele proxy-ului dar din păcate nu am găsit pagina pe care dumneavoastră o căutați.",
     "title": "N-am putut găsi pagina"
   },
+  "onboarding": {
+    "defaultConfirm": {
+      "cancel": "Anulare",
+      "confirm": "Folosește configurația implicită",
+      "description": "Configurația implicită nu are cele mai bune fluxuri și poate fi insuportabil de înceată.",
+      "title": "Sunteți sigur(ă)?"
+    },
+    "extension": {
+      "back": "Înapoi",
+      "explainer": "Folosind această extensie de browser, puteți obține cele mai bune fluxuri pe care le avem de oferit. Cu doar o simplă instalare.",
+      "explainerIos": "Din păcate, extensia de browser nu e suportată pe iOS, Apăsați <bold>Înapoi</bold> pentru a alege altă opțiune.",
+      "extensionHelp": "Dacă ați instalat extensia dar nu e detectată, <bold>deschideți extensia din meniul extensiilor al browserului dvs.</bold> și urmăriți pașii de pe ecran.",
+      "linkChrome": "Instalare extensie pentru Chrome",
+      "linkFirefox": "Instalare extensie pentru Firefox",
+      "notDetecting": "Instalată pe Chrome dar site-ul nu o detectează? Încerați să reîmprospătați pagina!",
+      "notDetectingAction": "Reîncarcă pagina",
+      "status": {
+        "disallowed": "Extensia nu e activată pentru această pagină",
+        "disallowedAction": "Activare extensie",
+        "failed": "Nu s-a putut obține statusul",
+        "loading": "Așteptăm să vă instalați extensia",
+        "outdated": "Versiunea extensiei este prea veche",
+        "success": "Extensia funcționează conform așteptărilor!"
+      },
+      "submit": "Continuare",
+      "title": "Să începem cu o extensie"
+    },
+    "proxy": {
+      "back": "Înapoi",
+      "explainer": "Cu metoda proxy, puteți obține fluxuri de calitate prin a face un proxy cu autoservire.",
+      "input": {
+        "errorConnection": "Nu s-a putut conecta la proxy",
+        "errorInvalidUrl": "URL invalid",
+        "errorNotProxy": "Am așteptat un proxy dar am primit un site web",
+        "label": "URL-ul proxy-ului",
+        "placeholder": "https://"
+      },
+      "link": "Învață cum se face un proxy",
+      "submit": "Validare proxy",
+      "title": "Să facem un proxy nou"
+    },
+    "start": {
+      "explainer": "Pentru a obține cele mai bune fluxuri posibile, va trebui să alegeți ce metodă de streaming vreți să folosiți.",
+      "options": {
+        "default": {
+          "text": "Nu vreau fluxuri de calitate,<0 /> <1>folosește configurația implicită</1>"
+        },
+        "extension": {
+          "action": "Instalare extensie",
+          "description": "Instalați extensia browser și obțineți acces la cele mai bune surse.",
+          "quality": "Cea mai bună calitate",
+          "title": "Extensie browser"
+        },
+        "proxy": {
+          "action": "Configurare proxy",
+          "description": "Configurați un proxy în doar 5 minute și obținți acces la resurse grozave.",
+          "quality": "Calitate bună",
+          "title": "Proxy personalizat"
+        }
+      },
+      "title": "Hai să configurăm movie-web"
+    }
+  },
   "overlays": {
     "close": "Închide"
   },
@@ -176,10 +252,11 @@
     },
     "menus": {
       "downloads": {
+        "copyHlsPlaylist": "Copiere link către lista de redare HLS",
         "disclaimer": "Descărcările sunt luate direct de la furnizor. Movie-web nu are control cum descărcările sunt furnizate.",
         "downloadSubtitle": "Descărcați subtitlul curente",
         "downloadVideo": "Descarcă video",
-        "hlsDisclaimer": "Descărcările sunt preluate direct de la furnizor. movie-web nu are control asupra modului în care sunt furnizate descărcările. Vă rugăm să rețineți că descărcați o listă de redare HLS, aceasta este destinată utilizatorilor familiar cu streamingul avansat.",
+        "hlsDisclaimer": "Descărcările sunt preluate direct de la furnizor. movie-web nu are control asupra modului în care sunt furnizate descărcările.<br /><br />Vă rugăm să rețineți că descărcați o listă de redare HLS, <bold>nu este recomandat să o descărcați dacă nu sunteți familiari cu formate avasate de streaming</bold>. Încercați surse diferite pentru formate diferte.",
         "onAndroid": {
           "1": "Pentru a descărca pe android, apăsați butonul de descărcare apoi în pagina nouă,<bold>apăsați și țineți</bold> pe video, apoi selectați <bold>salvează</bold>.",
           "shortTitle": "Descărcare / Android",
@@ -236,8 +313,8 @@
           "title": "Nu a fost găsită nicio încorporare"
         },
         "noStream": {
-          "text": "Sursa asta nu are nicio sursă de streaming pentru filmul său spectacolul.",
-          "title": "Niciun stream"
+          "text": "Sursa aceasta nu are niciun flux pentru acest film sau serial.",
+          "title": "Niciun flux"
         },
         "title": "Surse",
         "unknownOption": "Necunoscut"
@@ -398,24 +475,49 @@
     },
     "connections": {
       "server": {
-        "description": "Dacă doriți să vă conectați la un backend personalizat pentru a vă stoca datele, activați acest lucru și furnizați adresa URL.",
+        "description": "Dacă doriți să vă conectați la un backend personalizat pentru a vă stoca datele, activați acest lucru și furnizați adresa URL. <0>Instrucțiuni.</0>",
         "label": "Server personalizat",
         "urlLabel": "Adresa URL personalizată a serverului"
       },
       "setup": {
+        "doSetup": "Configurează",
         "errorStatus": {
+          "description": "Se pare că unul sau mai multe obiecte din această configurație au nevoie de atenția ta.",
           "title": "Ceva are nevoie de atenția ta"
+        },
+        "itemError": "Ceva nu e bine cu această setare. Parcurge configurația din nou pentru a o corecta.",
+        "items": {
+          "default": "Configurație implicită",
+          "extension": "Extensie",
+          "proxy": "Proxy personalizat"
+        },
+        "redoSetup": "Refă configurația",
+        "successStatus": {
+          "description": "Toate sunt la locul lor ca să începeți să urmariți conținutul preferat.",
+          "title": "Totul este pregătit!"
+        },
+        "unsetStatus": {
+          "description": "Apăsați butonul din dreapta pentru a începe procesul de configurare.",
+          "title": "Nu ați parcurs configurația"
         }
       },
       "title": "Conexiuni",
       "workers": {
         "addButton": "Adaugă un nou muncitor",
-        "description": "Pentru ca aplicația să funcționeze, tot traficul este direcționat prin proxy. Activați acest lucru dacă doriți să vă aduceți proprii lucrători.",
+        "description": "Pentru ca aplicația să funcționeze, tot traficul este direcționat prin proxy. Activați acest lucru dacă doriți să vă aduceți proprii lucrători. <0>Instrucțiuni.</0>",
         "emptyState": "Niciun muncitor incă, adaugă unu",
         "label": "Utilizați lucrători proxy personalizați",
         "urlLabel": "Adresele URL ale lucrătorilor",
         "urlPlaceholder": "https://"
       }
+    },
+    "preferences": {
+      "language": "Limba aplicației",
+      "languageDescription": "Limba aplicată întregii aplicații.",
+      "thumbnail": "Generați pictograme",
+      "thumbnailDescription": "De cele mai multe ori videoclipurile nu au pictograme. Puteți activa această setare pentru a le genera din mers, dar vă pot încetini videoclipul.",
+      "thumbnailLabel": "Generați pictograme",
+      "title": "Preferințe"
     },
     "reset": "Resetare",
     "save": "Salvează",
@@ -434,6 +536,7 @@
       }
     },
     "subtitles": {
+      "backgroundBlurLabel": "Blurarea fundalului",
       "backgroundLabel": "Opacitatea fundalului",
       "colorLabel": "Culoare",
       "previewQuote": "nu trebuie să mă tem. Frica este ucigașul minții.",

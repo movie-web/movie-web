@@ -57,6 +57,8 @@
       },
       "host": "Estaste a conectar a <0>{{hostname}}</0> - por favor, confirma se confías antes de crear a conta",
       "no": "Regresar",
+      "noHost": "O servidor non está configurado, polo que non podes crear unha conta",
+      "noHostTitle": "O servidor non está configurado!",
       "title": "Confías neste servidor?",
       "yes": "Si, si que confío neste servidor"
     },
@@ -118,7 +120,12 @@
       "noResults": "Non atopamos nada!",
       "placeholder": {
         "default": "Que che gustaría ver?",
-        "extra": []
+        "extra": [
+          "Qué queres explorar?",
+          "Que está na túa lista se seguimiento?",
+          "Cal é a túa película favorita?",
+          "Cal é a túa serie favorita?"
+        ]
       },
       "sectionTitle": "Resultados da busca"
     },
@@ -131,11 +138,15 @@
       },
       "morning": {
         "default": "Que che gustaría ver esta mañá?",
-        "extra": ["Escoitei que “Antes del amanecer” é boa"]
+        "extra": [
+          "Escoitei que “Antes del amanecer” é boa"
+        ]
       },
       "night": {
         "default": "Que che gustaría ver esta noite?",
-        "extra": ["Canso? Escoitei que “El Exorcista” é boa."]
+        "extra": [
+          "Canso? Escoitei que “El Exorcista” é boa."
+        ]
       }
     }
   },
@@ -241,6 +252,7 @@
     },
     "menus": {
       "downloads": {
+        "copyHlsPlaylist": "Copiar a ligazón da lista HLS",
         "disclaimer": "As descargas proveñen do provedor. movie-web non ten control sobre as descargas e a súa procedencia.",
         "downloadSubtitle": "Descargar subtítulos actuais",
         "downloadVideo": "Descargar video",
@@ -282,6 +294,7 @@
         "title": "Calidade"
       },
       "settings": {
+        "audioItem": "Audio",
         "downloadItem": "Descargar",
         "enableSubtitles": "Activar subtítulos",
         "experienceSection": "Configuración de experiencia",
@@ -308,8 +321,9 @@
         "unknownOption": "Descoñecido"
       },
       "subtitles": {
-        "customChoice": "Seleccionar subtítulos dende o arquivo",
+        "customChoice": "Sube ou arrastra o arquivo",
         "customizeLabel": "Personalizar",
+        "dropSubtitleFile": "Solta o arquivo de subtítulos aquí",
         "offChoice": "Apagar",
         "settings": {
           "backlink": "Subtítulos personalizados",
@@ -524,6 +538,7 @@
       }
     },
     "subtitles": {
+      "backgroundBlurLabel": "Desenfoque do fondo",
       "backgroundLabel": "Opacidade do fondo",
       "colorLabel": "Cór",
       "previewQuote": "Non debo temer. O medo é o asasino da mente.",

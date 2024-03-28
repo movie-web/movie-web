@@ -536,6 +536,7 @@
       }
     },
     "subtitles": {
+      "backgroundBlurLabel": "Difuminat del fons",
       "backgroundLabel": "Opacitat del fons",
       "colorLabel": "Color",
       "previewQuote": "No he de tindre por. La por és l'assassina de la ment.",

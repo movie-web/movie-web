@@ -294,6 +294,7 @@
         "title": "Qualität"
       },
       "settings": {
+        "audioItem": "Audio",
         "downloadItem": "Download",
         "enableSubtitles": "Untettitel aktivieren",
         "experienceSection": "Anzeigeerlebnis",
@@ -320,8 +321,9 @@
         "unknownOption": "Unbekannt"
       },
       "subtitles": {
-        "customChoice": "Untertitel aus Datei wählen",
+        "customChoice": "Untertiteldatei auswählen oder hier ablegen",
         "customizeLabel": "Anpassen",
+        "dropSubtitleFile": "Untertiteldatei hier ablegen",
         "offChoice": "Aus",
         "settings": {
           "backlink": "Eigene Untertitel",
@@ -379,6 +381,13 @@
       "title": "Hoppla, etwas ist schiefgegangen!"
     },
     "scraping": {
+      "extensionFailure": {
+        "badge": "Erweiterung deaktiviert",
+        "enableExtension": "Erweiterung aktivieren",
+        "homeButton": "Zur Startseite",
+        "text": "Du hast die movie-webe Erweiterung installiert. Um die Erweiterung zu benutzen, musst du sie für diese Seite aktivieren.",
+        "title": "Bitte aktiviere die Erweiterung"
+      },
       "items": {
         "failure": "Ein Fehler ist aufgetreten",
         "notFound": "Video nicht gefunden",

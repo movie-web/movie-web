@@ -294,6 +294,7 @@
         "title": "Qualité"
       },
       "settings": {
+        "audioItem": "Audio",
         "downloadItem": "Télécharger",
         "enableSubtitles": "Activer les sous-titres",
         "experienceSection": "Expérience de visionnage",
@@ -320,8 +321,9 @@
         "unknownOption": "Inconnu"
       },
       "subtitles": {
-        "customChoice": "Importer des sous-titres depuis un fichier",
+        "customChoice": "Glisser ou charger un fichier",
         "customizeLabel": "Personnaliser",
+        "dropSubtitleFile": "Glisser le fichier des sous-titres ici",
         "offChoice": "Désactivé",
         "settings": {
           "backlink": "Sous-titres personnalisés",

@@ -294,6 +294,7 @@
         "title": "Kwaliteit"
       },
       "settings": {
+        "audioItem": "Audio",
         "downloadItem": "Download",
         "enableSubtitles": "Ondertitels inschakelen",
         "experienceSection": "Kijk-ervaring",
@@ -320,8 +321,9 @@
         "unknownOption": "Onbekend"
       },
       "subtitles": {
-        "customChoice": "Selecteer ondertiteling uit bestand",
+        "customChoice": "Sleep of upload bestand",
         "customizeLabel": "Aanpassen",
+        "dropSubtitleFile": "Sleep ondertitelbestand naar hier",
         "offChoice": "Uit",
         "settings": {
           "backlink": "Aangepaste ondertiteling",
@@ -379,6 +381,13 @@
       "title": "Oeps, hier ging iets mis!"
     },
     "scraping": {
+      "extensionFailure": {
+        "badge": "Extensie uitgeschakeld",
+        "enableExtension": "Extensie inschakelen",
+        "homeButton": "Naar hoofdpagina",
+        "text": "Je hebt de movie-web extensie geïnstalleerd. Om deze te gebruiken, moet je de extensie inschakelen voor deze site.",
+        "title": "Activeer alstublieft de extensie"
+      },
       "items": {
         "failure": "Daar ging iets mis",
         "notFound": "Er is geen video gevonden",

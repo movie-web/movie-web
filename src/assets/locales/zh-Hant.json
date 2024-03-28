@@ -1,6 +1,6 @@
 {
   "about": {
-    "description": "movie-web 是一款在互聯網上搜尋流媒體的網路應用程式。團隊致力於讓使用者以最簡約的方式消費內容。",
+    "description": "movie-web 是一款在互聯網上搜尋串流媒體的網路應用程式。團隊致力於讓使用者以最簡約的方式觀看內容。",
     "faqTitle": "常見問題",
     "q1": {
       "body": "movie-web 不託管任何內容。您點選觀看內容時，系統均從互聯網搜尋（在加載提示頁和“視頻源”選項卡中，您可以看到正在使用的源）。媒體從未在 movie-web 中上傳，所有內容均通過搜索機制而得。",
@@ -12,7 +12,7 @@
     },
     "q3": {
       "body": "我們的搜尋結果由電影資料庫（TMDB）驅動，無論視訊來源是否有對應內容，都會顯示結果。",
-      "title": "搜尋結果中已顯示了影視劇或其他節目，為何我無法播放？"
+      "title": "搜尋結果中已顯示了電視劇或其他節目，為何我無法播放？"
     },
     "title": "關於 movie-web"
   },
@@ -22,18 +22,18 @@
   },
   "auth": {
     "createAccount": "還沒有帳戶？ <0>建立一個</0>",
-    "deviceNameLabel": "設備名稱",
+    "deviceNameLabel": "裝置名稱",
     "deviceNamePlaceholder": "我的手機",
     "generate": {
       "description": "您的密碼短語相當於使用者名稱與密碼。由於您需要輸入它來登入帳戶，請確保將其存放到安全位置",
-      "next": "我已儲存密碼短語",
+      "next": "我已經儲存密碼短語",
       "passphraseFrameLabel": "密碼短語",
       "title": "您的密碼短語"
     },
     "hasAccount": "已經擁有帳戶？ <0>點此登入。 </0>",
     "login": {
       "description": "請輸入密碼短語以登入您的帳戶",
-      "deviceLengthError": "請輸入設備名稱",
+      "deviceLengthError": "請輸入裝置名稱",
       "passphraseLabel": "12 字密碼短語",
       "passphrasePlaceholder": "密碼短語",
       "submit": "登入",
@@ -57,6 +57,8 @@
       },
       "host": "您正在連線到 <0>{{hostname}}</0> - 在建立帳戶之前，請確保您信任它",
       "no": "返回",
+      "noHost": "因為沒有配置伺服器，所以你不能夠創建帳戶",
+      "noHostTitle": "没有配置伺服器!",
       "title": "您是否信任這個伺服器？",
       "yes": "我信任這個伺服器"
     },
@@ -71,7 +73,7 @@
     }
   },
   "errors": {
-    "badge": "它已損壞",
+    "badge": "它壞了",
     "details": "錯誤詳情",
     "reloadPage": "重新加載頁面",
     "showError": "顯示錯誤詳情",
@@ -87,7 +89,7 @@
       "dmca": "DMCA",
       "github": "GitHub"
     },
-    "tagline": "使用這個開源流媒體應用程序觀看您最喜歡的節目和電影。"
+    "tagline": "使用這個開源串流媒體應用程式觀看您最喜歡的節目和電影。"
   },
   "global": {
     "name": "movie-web",
@@ -118,22 +120,33 @@
       "noResults": "我们找不到任何结果！",
       "placeholder": {
         "default": "您想看什麼？",
-        "extra": []
+        "extra": [
+          "你想探索什麼?",
+          "你的觀看清單有甚麼電影/電視劇?",
+          "你最喜愛的電影是甚麽?",
+          "你最喜愛的電視劇是甚麽?"
+        ]
       },
       "sectionTitle": "搜索結果"
     },
     "titles": {
       "day": {
         "default": "您今天下午想看什麼？",
-        "extra": ["想要來場冒險嗎？《侏羅紀公園》可能是完美選擇。"]
+        "extra": [
+          "想要來場冒險嗎？《侏羅紀公園》可能是完美選擇。"
+        ]
       },
       "morning": {
         "default": "您今天早上想看什麼？",
-        "extra": ["我聽說《情留半天》不錯"]
+        "extra": [
+          "我聽說《情留半天》不錯"
+        ]
       },
       "night": {
         "default": "您今晚想看什麼？",
-        "extra": ["疲倦了嗎？我聽說《驅魔人》不錯。"]
+        "extra": [
+          "你疲倦嗎？我聽說《驅魔人》不錯。"
+        ]
       }
     }
   },
@@ -150,7 +163,7 @@
     },
     "menu": {
       "about": "關於我們",
-      "donation": "捐",
+      "donation": "捐錢",
       "logout": "登出",
       "register": "同步到雲端",
       "settings": "設定",
@@ -167,32 +180,32 @@
     "defaultConfirm": {
       "cancel": "取消",
       "confirm": "使用預設設置",
-      "description": "默認設置沒有最好的直播，並且可能慢得令人難以忍受。",
+      "description": "默認設置沒有最好的串流，並且可能慢得令人難以忍受。",
       "title": "您確定嗎？"
     },
     "extension": {
       "back": "返回",
-      "explainer": "使用瀏覽器擴展程式，您可以獲得我們提供的最佳直播。只需簡單的安裝。",
-      "explainerIos": "不幸的是，iOS 不支援瀏覽器擴展程式，按 <bold>返回 </bold>選擇其他選項。",
-      "extensionHelp": "如果您已安裝該擴展程式，但未檢測到該擴展程式， <bold>請通過瀏覽器的擴展程式功能表打開該擴展 程式 </bold>，然後按照螢幕上的步驟操作。",
-      "linkChrome": "安裝 Chrome 擴展程式",
-      "linkFirefox": "安裝 Firefox 擴展程式",
+      "explainer": "使用瀏覽器擴充功能，您可以獲得我們提供的最佳直播。只需簡單的安裝。",
+      "explainerIos": "不幸的是，iOS 不支援瀏覽器擴充功能，按 <bold>返回 </bold>選擇其他選項。",
+      "extensionHelp": "如果您已安裝該擴充功能，但未檢測到該擴充功能， <bold>請通過瀏覽器的擴充功能功能表打開該擴展 程式 </bold>，然後按照螢幕上的步驟操作。",
+      "linkChrome": "安裝 Chrome 擴充功能",
+      "linkFirefox": "安裝 Firefox 擴充功能",
       "notDetecting": "安裝在 Chrome 上，但網站沒有檢測到它？嘗試重新載入頁面！",
       "notDetectingAction": "重新加載頁面",
       "status": {
-        "disallowed": "未為此頁面啟用擴展程式",
-        "disallowedAction": "啟用擴展程式",
+        "disallowed": "未為此頁面啟用瀏覽器擴充功能",
+        "disallowedAction": "啟用瀏覽器擴充功能",
         "failed": "無法請求狀態",
-        "loading": "等待您安裝擴展程式",
-        "outdated": "擴展程式版本太舊",
-        "success": "擴展程式正在按預期工作！"
+        "loading": "等待您安裝瀏覽器擴充功能",
+        "outdated": "瀏覽器擴充功能版本太舊",
+        "success": "瀏覽器擴充功能正在正常運作！"
       },
       "submit": "繼續",
-      "title": "讓我們從擴展程式開始"
+      "title": "讓我們從瀏覽器擴充功能開始"
     },
     "proxy": {
       "back": "返回",
-      "explainer": "使用代理伺服器，您可以通過製作自定代理伺服器來獲得高品質的直播。",
+      "explainer": "使用代理伺服器，您可以通過製作自定代理伺服器來獲得高品質的串流。",
       "input": {
         "errorConnection": "無法連接到代理伺服器",
         "errorInvalidUrl": "URL 無效",
@@ -205,20 +218,20 @@
       "title": "讓我們創建一個新的代理伺服器"
     },
     "start": {
-      "explainer": "為了獲得最好的流媒體，您需要選擇您想使用的流媒體方法。",
+      "explainer": "為了獲得最好的串流媒體，您需要選擇您想使用的串流方法。",
       "options": {
         "default": {
-          "text": "我不想要高品質的流，<0 /> <1> 使用預設設置</1>"
+          "text": "我不想要高品質的串流，<0 /> <1> 使用預設設置</1>"
         },
         "extension": {
-          "action": "安裝擴展程式",
-          "description": "安裝瀏覽器擴展程式並訪問最佳資源。",
+          "action": "安裝瀏覽器擴充功能",
+          "description": "安裝瀏覽器擴充功能來使用最佳資源。",
           "quality": "最好的品質",
-          "title": "瀏覽器擴展程式"
+          "title": "瀏覽器擴充功能"
         },
         "proxy": {
           "action": "設置代理伺服器",
-          "description": "只需 5 分鐘即可設置代理伺服器並訪問優質資源。",
+          "description": "只需 5 分鐘即可設置代理伺服器並訪問優質來源。",
           "quality": "好品質",
           "title": "自訂代理伺服器"
         }
@@ -235,11 +248,12 @@
       "short": "後退"
     },
     "casting": {
-      "enabled": "正在投放到設備…"
+      "enabled": "正在投放到裝置…"
     },
     "menus": {
       "downloads": {
-        "disclaimer": "下載直接從供應商處獲取。movie-web 無法控制下載的提供方式。",
+        "copyHlsPlaylist": "複製 HLS 播放清單鏈接",
+        "disclaimer": "視頻直接從供應商處獲取。movie-web 無法控制下載的提供方式。",
         "downloadSubtitle": "下載當前字幕",
         "downloadVideo": "下載視頻",
         "hlsDisclaimer": "下載直接從供應商處獲取。movie-web 無法控制下載的提供方式。<br /><br /> 請注意，您正在下載 HLS 播放清單， <bold>如果您不熟悉高級流媒體格式，則不建議下載 </bold> 。嘗試使用不同格式的不同來源。",
@@ -261,10 +275,10 @@
         "title": "下載"
       },
       "episodes": {
-        "button": "分集",
-        "emptyState": "該季暫無分集，請稍後再來！",
+        "button": "集數",
+        "emptyState": "該季暫無集數，請稍後再來！",
         "episodeBadge": "E{{episode}}",
-        "loadingError": "加載分集時出錯",
+        "loadingError": "加載集數時出錯",
         "loadingList": "載入中...",
         "loadingTitle": "載入中...",
         "unairedEpisodes": "本季中的一集或多集已因尚未播出而被禁用。"
@@ -276,7 +290,7 @@
       "quality": {
         "automaticLabel": "自動品質",
         "hint": "您可以嘗試<0>切換源</0>以獲得不同的質量選項。",
-        "iosNoQuality": "由於 Apple 定義的限制，此來源的品質選擇在 iOS 上不可用。您可以嘗試<0>切換到另一個來源</0>以獲得不同的質量選項。",
+        "iosNoQuality": "由於 Apple 的限制，此來源的品質選擇在 iOS 上不可用。您可以嘗試<0>切換到另一個來源</0>以獲得不同的質量選項。",
         "title": "品質"
       },
       "settings": {
@@ -330,9 +344,9 @@
       },
       "extensionPermission": {
         "badge": "缺少權限",
-        "button": "使用擴展程式",
-        "text": "您已安裝瀏覽器擴展，但我們需要您的許可才能啟用它。",
-        "title": "配置擴展程式"
+        "button": "使用瀏覽器擴充功能",
+        "text": "您已安裝瀏覽器擴展功能，但我們需要您的許可才能啟用它。",
+        "title": "配置瀏覽器擴充功能"
       },
       "failed": {
         "badge": "失敗",
@@ -368,7 +382,7 @@
       "items": {
         "failure": "發生錯誤",
         "notFound": "沒有視頻",
-        "pending": "檢查影片..."
+        "pending": "尋找影片中..."
       },
       "notFound": {
         "badge": "未找到",
@@ -386,9 +400,9 @@
     },
     "turnstile": {
       "description": "請通過右側的驗證碼來確認您是人類。這是為了保護 movie-web 的安全！",
-      "error": "無法驗證您的人類身份。請再試一次。",
+      "error": "無法驗證您是一個人類。請再試一次。",
       "title": "我們需要驗證您是否為人類。",
-      "verifyingHumanity": "正在驗證您的人類身份..."
+      "verifyingHumanity": "正在驗證您是不是一個人類..."
     }
   },
   "screens": {
@@ -430,7 +444,7 @@
       },
       "devices": {
         "deviceNameLabel": "設備名稱",
-        "failed": "無法載入階段",
+        "failed": "無法載入",
         "removeDevice": "刪除",
         "title": "設備"
       },
@@ -503,7 +517,7 @@
       "thumbnail": "生成縮圖",
       "thumbnailDescription": "大多數時候，視頻沒有縮圖。您可以啟用此設置以即時生成它們，但它們會使您的視頻變慢。",
       "thumbnailLabel": "生成縮圖",
-      "title": "偏好"
+      "title": "偏好設定"
     },
     "reset": "重置",
     "save": "保存",
@@ -516,12 +530,13 @@
         "insecure": "不安全",
         "notLoggedIn": "您尚未登錄",
         "secure": "安全",
-        "title": "應用資訊",
+        "title": "應用程式的資訊",
         "unknownVersion": "未知",
         "userId": "使用者ID"
       }
     },
     "subtitles": {
+      "backgroundBlurLabel": "背景模糊",
       "backgroundLabel": "背景不透明度",
       "colorLabel": "顏色",
       "previewQuote": "我絕不能害怕。 恐懼會扼殺思維能力。",
