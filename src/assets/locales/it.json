@@ -381,6 +381,13 @@
       "title": "Impossibile riprodurre il video!"
     },
     "scraping": {
+      "extensionFailure": {
+        "badge": "L'estensione è disabilitata",
+        "enableExtension": "Abilita l'estensione",
+        "homeButton": "Torna alla pagina iniziale",
+        "text": "Avete installato l'estensione movie-web. Per iniziare a usarla, è necessario abilitare l'estensione per questo sito.",
+        "title": "Abilita l'estensione"
+      },
       "items": {
         "failure": "Si è verificato un errore",
         "notFound": "Non ha il video",
