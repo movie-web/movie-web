@@ -381,6 +381,13 @@
       "title": "Hoppla, etwas ist schiefgegangen!"
     },
     "scraping": {
+      "extensionFailure": {
+        "badge": "Erweiterung deaktiviert",
+        "enableExtension": "Erweiterung aktivieren",
+        "homeButton": "Zur Startseite",
+        "text": "Du hast die movie-webe Erweiterung installiert. Um die Erweiterung zu benutzen, musst du sie für diese Seite aktivieren.",
+        "title": "Bitte aktiviere die Erweiterung"
+      },
       "items": {
         "failure": "Ein Fehler ist aufgetreten",
         "notFound": "Video nicht gefunden",
