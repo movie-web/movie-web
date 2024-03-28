@@ -56,12 +56,20 @@ export interface CaptionListItem {
   hls?: boolean;
 }
 
+export interface AudioTrack {
+  id: string;
+  label: string;
+  language: string;
+}
+
 export interface SourceSlice {
   status: PlayerStatus;
   source: SourceSliceSource | null;
   sourceId: string | null;
   qualities: SourceQuality[];
+  audioTracks: AudioTrack[];
   currentQuality: SourceQuality | null;
+  currentAudioTrack: AudioTrack | null;
   captionList: CaptionListItem[];
   caption: {
     selected: Caption | null;
@@ -109,8 +117,10 @@ export const createSourceSlice: MakeSlice<SourceSlice> = (set, get) => ({
   source: null,
   sourceId: null,
   qualities: [],
+  audioTracks: [],
   captionList: [],
   currentQuality: null,
+  currentAudioTrack: null,
   status: playerStatus.IDLE,
   meta: null,
   caption: {

@@ -2,8 +2,7 @@ import { ReactNode, useCallback, useEffect, useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useAsyncFn, useInterval } from "react-use";
 
-import { isAllowedExtensionVersion } from "@/backend/extension/compatibility";
-import { extensionInfo, sendPage } from "@/backend/extension/messaging";
+import { sendPage } from "@/backend/extension/messaging";
 import { Button } from "@/components/buttons/Button";
 import { Icon, Icons } from "@/components/Icon";
 import { Loading } from "@/components/layout/Loading";
@@ -22,24 +21,8 @@ import {
   ExtensionDetectionResult,
   detectExtensionInstall,
 } from "@/utils/detectFeatures";
-
-type ExtensionStatus =
-  | "unknown"
-  | "failed"
-  | "disallowed"
-  | "noperms"
-  | "outdated"
-  | "success";
-
-async function getExtensionState(): Promise<ExtensionStatus> {
-  const info = await extensionInfo();
-  if (!info) return "unknown"; // cant talk to extension
-  if (!info.success) return "failed"; // extension failed to respond
-  if (!info.allowed) return "disallowed"; // extension is not enabled on this page
-  if (!info.hasPermission) return "noperms"; // extension has no perms to do it's tasks
-  if (!isAllowedExtensionVersion(info.version)) return "outdated"; // extension is too old
-  return "success"; // no problems
-}
+import { getExtensionState } from "@/utils/extension";
+import type { ExtensionStatus } from "@/utils/extension";
 
 function RefreshBar() {
   const { t } = useTranslation();

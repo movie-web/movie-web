@@ -283,5 +283,8 @@ export function makeChromecastDisplayInterface(
     async setSubtitlePreference() {
       return Promise.resolve();
     },
+    changeAudioTrack() {
+      // cant change audio tracks
+    },
   };
 }

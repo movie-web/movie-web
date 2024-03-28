@@ -20,7 +20,7 @@ export type TMDBMediaResult = {
   title: string;
   poster?: string;
   id: number;
-  original_release_year?: number;
+  original_release_date?: Date;
   object_type: TMDBContentTypes;
   seasons?: TMDBSeasonShort[];
 };

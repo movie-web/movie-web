@@ -66,7 +66,7 @@ export function formatTMDBMeta(
   return {
     title: media.title,
     id: media.id.toString(),
-    year: media.original_release_year?.toString(),
+    year: media.original_release_date?.getFullYear()?.toString(),
     poster: media.poster,
     type,
     seasons: seasons as any,
@@ -94,7 +94,8 @@ export function formatTMDBMetaToMediaItem(media: TMDBMediaResult): MediaItem {
   return {
     title: media.title,
     id: media.id.toString(),
-    year: media.original_release_year ?? 0,
+    year: media.original_release_date?.getFullYear() ?? 0,
+    release_date: media.original_release_date,
     poster: media.poster,
     type,
   };
@@ -260,7 +261,7 @@ export function formatTMDBSearchResult(
       title: show.name,
       poster: getMediaPoster(show.poster_path),
       id: show.id,
-      original_release_year: new Date(show.first_air_date).getFullYear(),
+      original_release_date: new Date(show.first_air_date),
       object_type: mediatype,
     };
   }
@@ -271,7 +272,7 @@ export function formatTMDBSearchResult(
     title: movie.title,
     poster: getMediaPoster(movie.poster_path),
     id: movie.id,
-    original_release_year: new Date(movie.release_date).getFullYear(),
+    original_release_date: new Date(movie.release_date),
     object_type: mediatype,
   };
 }

@@ -16,6 +16,7 @@ export function SettingsMenu({ id }: { id: string }) {
   const { t } = useTranslation();
   const router = useOverlayRouter(id);
   const currentQuality = usePlayerStore((s) => s.currentQuality);
+  const currentAudioTrack = usePlayerStore((s) => s.currentAudioTrack);
   const selectedCaptionLanguage = usePlayerStore(
     (s) => s.caption.selected?.language,
   );
@@ -35,6 +36,11 @@ export function SettingsMenu({ id }: { id: string }) {
       t("player.menus.subtitles.unknownLanguage")
     : undefined;
 
+  const selectedAudioLanguagePretty = currentAudioTrack
+    ? getPrettyLanguageNameFromLocale(currentAudioTrack.language) ??
+      t("player.menus.subtitles.unknownLanguage")
+    : undefined;
+
   const source = usePlayerStore((s) => s.source);
 
   const downloadable = source?.type === "file" || source?.type === "hls";
@@ -51,6 +57,15 @@ export function SettingsMenu({ id }: { id: string }) {
         >
           {t("player.menus.settings.qualityItem")}
         </Menu.ChevronLink>
+        {currentAudioTrack && (
+          <Menu.ChevronLink
+            onClick={() => router.navigate("/audio")}
+            rightText={selectedAudioLanguagePretty ?? undefined}
+          >
+            {t("player.menus.settings.audioItem")}
+          </Menu.ChevronLink>
+        )}
+
         <Menu.ChevronLink
           onClick={() => router.navigate("/source")}
           rightText={sourceName}

@@ -32,6 +32,9 @@ export function MediaSession() {
 
   const updatePositionState = useCallback(
     (position: number) => {
+      // If the browser doesn't support setPositionState, return
+      if (typeof navigator.mediaSession.setPositionState !== "function") return;
+
       // If the updated position needs to be buffered, queue an update
       if (position > data.progress.buffered) {
         shouldUpdatePositionState.current = true;

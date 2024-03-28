@@ -81,6 +81,24 @@ export function makeVideoElementDisplayInterface(): DisplayInterface {
     emit("qualities", convertedLevels);
   }
 
+  function reportAudioTracks() {
+    if (!hls) return;
+    const currentTrack = hls.audioTracks[hls.audioTrack];
+    emit("changedaudiotrack", {
+      id: currentTrack.id.toString(),
+      label: currentTrack.name,
+      language: currentTrack.lang ?? "unknown",
+    });
+    emit(
+      "audiotracks",
+      hls.audioTracks.map((v) => ({
+        id: v.id.toString(),
+        label: v.name,
+        language: v.lang ?? "unknown",
+      })),
+    );
+  }
+
   function setupQualityForHls() {
     if (videoElement && canPlayHlsNatively(videoElement)) {
       return; // nothing to change
@@ -155,6 +173,7 @@ export function makeVideoElementDisplayInterface(): DisplayInterface {
           if (!hls) return;
           reportLevels();
           setupQualityForHls();
+          reportAudioTracks();
 
           if (isExtensionActiveCached()) {
             hls.on(Hls.Events.LEVEL_LOADED, async (_, data) => {
@@ -463,6 +482,19 @@ export function makeVideoElementDisplayInterface(): DisplayInterface {
       });
       hls?.setSubtitleOption({ lang });
       return promise;
+    },
+    changeAudioTrack(track) {
+      if (!hls) return;
+      const audioTrack = hls?.audioTracks.find(
+        (t) => t.id.toString() === track.id,
+      );
+      if (!audioTrack) return;
+      hls.audioTrack = hls.audioTracks.indexOf(audioTrack);
+      emit("changedaudiotrack", {
+        id: audioTrack.id.toString(),
+        label: audioTrack.name,
+        language: audioTrack.lang ?? "unknown",
+      });
     },
   };
 }

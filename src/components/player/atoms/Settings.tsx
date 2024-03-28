@@ -14,6 +14,7 @@ import { Menu } from "@/components/player/internals/ContextMenu";
 import { useOverlayRouter } from "@/hooks/useOverlayRouter";
 import { usePlayerStore } from "@/stores/player/store";
 
+import { AudioView } from "./settings/AudioView";
 import { CaptionSettingsView } from "./settings/CaptionSettingsView";
 import { CaptionsView } from "./settings/CaptionsView";
 import { DownloadRoutes } from "./settings/Downloads";
@@ -44,6 +45,11 @@ function SettingsOverlay({ id }: { id: string }) {
         <OverlayPage id={id} path="/quality" width={343} height={400}>
           <Menu.Card>
             <QualityView id={id} />
+          </Menu.Card>
+        </OverlayPage>
+        <OverlayPage id={id} path="/audio" width={343} height={431}>
+          <Menu.Card>
+            <AudioView id={id} />
           </Menu.Card>
         </OverlayPage>
         <OverlayPage id={id} path="/captions" width={343} height={431}>

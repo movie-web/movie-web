@@ -1,7 +1,7 @@
 import { MediaPlaylist } from "hls.js";
 
 import { MWMediaType } from "@/backend/metadata/types/mw";
-import { CaptionListItem } from "@/stores/player/slices/source";
+import { AudioTrack, CaptionListItem } from "@/stores/player/slices/source";
 import { LoadableSource, SourceQuality } from "@/stores/player/utils/qualities";
 import { Listener } from "@/utils/events";
 
@@ -25,6 +25,8 @@ export type DisplayInterfaceEvents = {
   loading: boolean;
   qualities: SourceQuality[];
   changedquality: SourceQuality | null;
+  audiotracks: AudioTrack[];
+  changedaudiotrack: AudioTrack | null;
   needstrack: boolean;
   canairplay: boolean;
   playbackrate: number;
@@ -60,6 +62,7 @@ export interface DisplayInterface extends Listener<DisplayInterfaceEvents> {
     automaticQuality: boolean,
     preferredQuality: SourceQuality | null,
   ): void;
+  changeAudioTrack(audioTrack: AudioTrack): void;
   processVideoElement(video: HTMLVideoElement): void;
   processContainerElement(container: HTMLElement): void;
   toggleFullscreen(): void;

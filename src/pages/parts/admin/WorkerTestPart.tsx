@@ -83,10 +83,12 @@ export function WorkerTestPart() {
           status: "success",
         });
       } catch (err) {
+        const error = err as Error;
+        error.message = error.message.replace(worker.url, "WORKER_URL");
         updateWorker(worker.id, {
           id: worker.id,
           status: "error",
-          error: err as Error,
+          error,
         });
       }
     });

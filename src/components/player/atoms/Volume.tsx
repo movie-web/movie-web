@@ -41,7 +41,12 @@ export function Volume(props: Props) {
 
   const handleMouseEnter = useCallback(async () => {
     if (await canChangeVolume()) setHovering(true);
+    document.body.classList.add("overflow-y-hidden");
   }, [setHovering]);
+
+  const handleMouseLeave = () => {
+    document.body.classList.remove("overflow-y-hidden");
+  };
 
   let percentage = makePercentage(volume * 100);
   if (dragging) percentage = makePercentage(dragPercentage);
@@ -61,9 +66,10 @@ export function Volume(props: Props) {
     <div
       className={props.className}
       onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       onWheel={handleWheel}
     >
-      <div className="pointer-events-auto flex cursor-pointer items-center py-0">
+      <div className="pointer-events-auto flex cursor-pointer items-center py-0 touch-none">
         <div className="px-4 text-2xl text-white" onClick={handleClick}>
           <Icon icon={percentage > 0 ? Icons.VOLUME : Icons.VOLUME_X} />
         </div>

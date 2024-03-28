@@ -75,6 +75,16 @@ export const createDisplaySlice: MakeSlice<DisplaySlice> = (set, get) => ({
         s.currentQuality = quality;
       });
     });
+    newDisplay.on("audiotracks", (audioTracks) => {
+      set((s) => {
+        s.audioTracks = audioTracks;
+      });
+    });
+    newDisplay.on("changedaudiotrack", (audioTrack) => {
+      set((s) => {
+        s.currentAudioTrack = audioTrack;
+      });
+    });
     newDisplay.on("needstrack", (needsTrack) => {
       set((s) => {
         s.caption.asTrack = needsTrack;

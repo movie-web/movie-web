@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
@@ -24,6 +25,20 @@ export interface MediaCardProps {
   onClose?: () => void;
 }
 
+function checkReleased(media: MediaItem): boolean {
+  const isReleasedYear = Boolean(
+    media.year && media.year <= new Date().getFullYear(),
+  );
+  const isReleasedDate = Boolean(
+    media.release_date && media.release_date <= new Date(),
+  );
+
+  // If the media has a release date, use that, otherwise use the year
+  const isReleased = media.release_date ? isReleasedDate : isReleasedYear;
+
+  return isReleased;
+}
+
 function MediaCardContent({
   media,
   linkable,
@@ -35,10 +50,19 @@ function MediaCardContent({
   const { t } = useTranslation();
   const percentageString = `${Math.round(percentage ?? 0).toFixed(0)}%`;
 
-  const canLink = linkable && !closable;
+  const isReleased = useCallback(() => checkReleased(media), [media]);
+
+  const canLink = linkable && !closable && isReleased();
 
   const dotListContent = [t(`media.types.${media.type}`)];
-  if (media.year) dotListContent.push(media.year.toFixed());
+
+  if (media.year) {
+    dotListContent.push(media.year.toFixed());
+  }
+
+  if (!isReleased()) {
+    dotListContent.push(t("media.unreleased"));
+  }
 
   return (
     <Flare.Base
@@ -58,14 +82,14 @@ function MediaCardContent({
       />
       <Flare.Child
         className={`pointer-events-auto relative mb-2 p-3 transition-transform duration-100 ${
-          canLink ? "group-hover:scale-95" : ""
+          canLink ? "group-hover:scale-95" : "opacity-60"
         }`}
       >
         <div
           className={classNames(
             "relative mb-4 pb-[150%] w-full overflow-hidden rounded-xl bg-mediaCard-hoverBackground bg-cover bg-center transition-[border-radius] duration-100",
             {
-              "group-hover:rounded-lg": !closable,
+              "group-hover:rounded-lg": canLink,
             },
           )}
           style={{
@@ -142,7 +166,12 @@ function MediaCardContent({
 export function MediaCard(props: MediaCardProps) {
   const content = <MediaCardContent {...props} />;
 
-  const canLink = props.linkable && !props.closable;
+  const isReleased = useCallback(
+    () => checkReleased(props.media),
+    [props.media],
+  );
+
+  const canLink = props.linkable && !props.closable && isReleased();
 
   let link = canLink
     ? `/media/${encodeURIComponent(mediaItemToId(props.media))}`
@@ -157,7 +186,7 @@ export function MediaCard(props: MediaCardProps) {
     }
   }
 
-  if (!props.linkable) return <span>{content}</span>;
+  if (!canLink) return <span>{content}</span>;
   return (
     <Link
       to={link}
